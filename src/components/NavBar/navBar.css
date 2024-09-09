@@ -1,0 +1,10 @@
+.logo-container {
+  text-align: left;
+}
+
+.center-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+}

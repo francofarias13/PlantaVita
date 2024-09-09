@@ -1,18 +1,25 @@
-
-import './navBar.css'
-import logo from '../../assets/Logotipo_para_vivero_ilustrado_verde-removebg-preview.png'
-import { CartWidget } from './CartWidget/CartWidget'
+import "./navBar.css";
+import logo from "../../assets/Logotipo_para_vivero_ilustrado_verde__2_-removebg-preview.png";
+import { CartWidget } from "./CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <nav>
-    <img src={logo} alt='logo-plantavita' />
-    <h1>PlantaVita</h1>
-    <div>
-        <button>Interior</button>
-        <button>Exterior</button>
-    </div>
-    <CartWidget />
+    <nav className="navbar navbar-expand-lg">
+      <div className="logo-container">
+        <Link to="/" className="navbar-brand">
+          <img src={logo} alt="logo-plantavita" width="150" />
+        </Link>
+      </div>
+      <div className="center-links">
+        <Link to="/category/interior" className="btn btn-outline-success">
+          Interior
+        </Link>
+        <Link to="/category/exterior" className="btn btn-outline-success">
+          Exterior
+        </Link>
+      </div>
+      <CartWidget />
     </nav>
-  )
-}
+  );
+};

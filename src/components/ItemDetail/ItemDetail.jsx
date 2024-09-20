@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { ItemCount } from '../ItemCount/ItemCount';
-import { useCart } from '../../NavBar/context/CartContext';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { ItemCount } from "../ItemCount/ItemCount";
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const ItemDetail = ({ id, name, img, price, descripcion, stock }) => {
@@ -10,12 +10,12 @@ const ItemDetail = ({ id, name, img, price, descripcion, stock }) => {
 
   const onAdd = (quantity) => {
     addItem({ id, name, price }, quantity);
-    setQuantityAdded(quantity);  
+    setQuantityAdded(quantity);
   };
 
   useEffect(() => {
     return () => {
-      setQuantityAdded(0); 
+      setQuantityAdded(0);
     };
   }, []);
 
@@ -26,7 +26,7 @@ const ItemDetail = ({ id, name, img, price, descripcion, stock }) => {
       <p>{descripcion}</p>
       <p>Precio: ${price}</p>
       <ItemCount stock={stock} initial={1} onAdd={onAdd} />
-            {quantityAdded > 0 && (
+      {quantityAdded > 0 && (
         <Link to="/cart" className="btn btn-success mt-3">
           Ver Compra
         </Link>

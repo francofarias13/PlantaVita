@@ -1,6 +1,6 @@
 import "./navBar.css";
 import logo from "../../assets/Logotipo_para_vivero_ilustrado_verde__2_-removebg-preview.png";
-import { CartWidget } from "./CartWidget/CartWidget";
+import { CartWidget } from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {

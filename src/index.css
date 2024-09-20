@@ -1,20 +1,25 @@
 :root {
-  background-color:rgb(71, 116, 71);
+  background-color: rgb(71, 116, 71);
 }
 :root {
-  --primary-color: #7dc480;  
-  --secondary-color: #FFFFFF; 
-  --tertiary-color: #F1F1F1;
-  --text-color: #333333;     
+  --primary-color: #7dc480;
+  --secondary-color: #ffffff;
+  --tertiary-color: #f1f1f1;
+  --text-color: #333333;
 }
 
 body {
   background-color: var(--tertiary-color);
   color: var(--text-color);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--primary-color);
 }
 
@@ -24,13 +29,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-success:hover {
-  background-color: #45A049; 
+  background-color: #45a049;
 }
 
 .navbar {
   background-color: var(--primary-color);
 }
-
 
 .card {
   border: 1px solid var(--tertiary-color);
@@ -51,4 +55,3 @@ footer {
   padding: 5px;
   text-align: center;
 }
-

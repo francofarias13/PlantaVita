@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/NavBar/ItemListContainer/ItemListContainer";
-import { ItemDetailContainer } from "./components/NavBar/ItemDetailContainer/ItemDetailContainer";
-import { CartProvider } from "./components/NavBar/context/CartContext";
-import Cart from "./components/NavBar/Cart/Cart";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { CartProvider } from "./components/context/CartContext";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (

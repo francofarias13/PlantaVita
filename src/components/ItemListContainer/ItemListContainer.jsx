@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getProducts } from "../asyncMock";
 import { ItemList } from "../ItemList/ItemList";
 import "./itemListContainer.css";
+import { getProducts } from "../asyncMock";
+
 
 /* eslint-disable react/prop-types */
 export const ItemListContainer = ({ greeting }) => {

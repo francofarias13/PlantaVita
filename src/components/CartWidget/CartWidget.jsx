@@ -1,14 +1,16 @@
-import { useCart } from "../context/CartContext";
-import cart from "./assets/icons8-carrito-de-compras-80.png";
-import "./cartWidget.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import cartIcon from "./assets/icons8-carrito-de-compras-80.png";
+import "./cartWidget.css";
 
 export const CartWidget = () => {
-  const { totalItems } = useCart();
+  const { cart } = useCart();
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <Link to="/cart" className="cart-icon">
-      <img src={cart} alt="cart-widget" width="50" />
+      <img src={cartIcon} alt="Cart" width="50" />
       {totalItems > 0 && <span className="cart-counter">{totalItems}</span>}
     </Link>
   );

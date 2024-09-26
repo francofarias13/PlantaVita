@@ -2,23 +2,17 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./itemDetailConteiner.css";
-import { getProducts } from "../asyncMock"
-
+import { getSingleProduct } from "../../firebase/db";
 
 export const ItemDetailContainer = () => {
   const { itemId } = useParams();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    getProducts().then((products) => {
-      const foundProduct = products.find((prod) => prod.id === itemId);
-      setProduct(foundProduct);
-    });
+    getSingleProduct(itemId, setProduct);
   }, [itemId]);
 
   return (
-    <div>
-      {product ? <ItemDetail {...product} /> : <p>Cargando...</p>}
-    </div>
+    <div>{product ? <ItemDetail {...product} /> : <p>Cargando...</p>}</div>
   );
-}
+};

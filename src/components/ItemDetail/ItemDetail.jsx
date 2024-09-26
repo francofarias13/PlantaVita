@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import "./itemDetail.css";
 
 // eslint-disable-next-line react/prop-types
 const ItemDetail = ({ id, name, img, price, descripcion, stock }) => {

@@ -4,3 +4,18 @@
   align-items: center;
   text-align: center;
 }
+
+.center-text h1 {
+  font-size: 3.5rem;
+  color: #4caf50;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.center-text h1:hover {
+  transform: scale(1.05);
+  color: #388e3c;
+}
